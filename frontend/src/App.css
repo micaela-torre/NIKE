@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: 'Merriweather Sans', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+div.homeContainer, div.productsContainer{
+  background-image: url("https://images.pexels.com/photos/6775241/pexels-photo-6775241.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+div.centerContainer, div.cardsContainer{
+  background: rgb(255,255,255);
+  width: 80%;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div.navHome, div.mainContainer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+div.logoContainer{
+  background-image: url("https://i.postimg.cc/J73mf7yq/logo-png.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 10%;
+  height: 5vh;
+}
+div.navContainer{
+  width: 50%;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.navContainer>*, h1.title{
+text-transform: uppercase;
+font-weight: bold;
+}
+div.navContainer a , div.exploreDiv a{
+  text-decoration: none;
+  color: #343435;
+}
+div.navContainer a.active {
+  border-bottom: 2px solid tomato;
+}
+div.imageContainer{
+  background-image: url("https://i.postimg.cc/W3YkwmM9/zapas.png");
+  background-position: center;
+  background-size: cover;
+  width: 50%;
+  height: 55vh;
+  filter: drop-shadow(-37px 45px 7px rgba(0, 0, 0, 0.79))
+}
+/* div.imageContainer:hover{
+  width: 52%;
+  height: 56vh;
+  transition: all 0.3s;
+} */
+div.mainContainer{
+  width: 100%;
+}
+h1.title{
+  font-size: 3rem;
+  font-weight: 800;
+  width: 14vw;
+  color: #414044;
+}
+button.buyButton{
+  border: none;
+  padding: .8rem 1.2rem;
+  background-color: tomato;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+p.price{
+  font-weight: bolder;
+  color: #343435;
+  margin: 1rem;
+}
+div.footerContainer{
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+}
+div.socialNetworks{
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+div.socialNetworks>*{
+  width:1.5rem;
+  height:1.5rem;
+  fill: #343435;
+  cursor: pointer;
+}
+div.exploreDiv{
+width: 35%;
+height: 15vh;
+background-color:#343435 ;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: .5rem;
+text-transform: uppercase;
+}
+div.exploreDiv a{
+  color: #fff;
+}
+div.cards{
+  padding: 1rem;
+  min-height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  flex-wrap: wrap;
+}
+div.card{
+  width: 30%;
+  height: 50vh;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: .3rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+div.productImage{
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 35vh;
+}
+div.card button.buyButton{
+  border-bottom-left-radius: .3rem;
+  border-bottom-right-radius: .3rem;
 }
