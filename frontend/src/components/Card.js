@@ -16,5 +16,6 @@ const Card =(props)=> {
     </>
   )
 }
+// prueba
 
 export default Card;
