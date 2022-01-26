@@ -1,19 +1,9 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Card from '../components/Card';
 import Nav from '../components/Nav';
 
+
 const Products=()=>{
-const[products, setProducts]= useState([])
-useEffect(async()=>{
- try{
-    let res = await axios.get("http://localhost:4000/api/products")
-    setProducts(res.data.response)
- }catch(err){
-     console.log(err)
- }
- 
-},[])
   return (
       <div className='productsContainer'>
           <div className='cardsContainer'>
@@ -29,7 +19,7 @@ useEffect(async()=>{
                 </svg>
               </div>
               <div className='cards'>
-                  <Card products={products}/>
+                  <Card/>
               </div>
           </div>
       </div>

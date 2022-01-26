@@ -1,21 +1,22 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { DataContext } from '../context/DataContext';
 
-const Card =(props)=> {
-  const{products} = props
-  console.log(products)
+const Card =()=> {
+  const {products} = useContext(DataContext);
+ 
   return(
     <>
        {products.map((product, index)=>
           <div key={`product:${index}`} className='card'>
-            <div style={{backgroundImage:`url("${product.photo}")`}} className='productImage'></div>
-            <p className='productDescription'>{product.name}</p>
-            <p>${product.price}</p>
-            <button className='buyButton'>Agregar al carrito</button>
+              <div style={{backgroundImage:`url("${product.photo}")`}} className='productImage'></div>
+              <p className='productDescription'>{product.name}</p>
+              <p>${product.price}</p>
+              <button className='buyButton'>Agregar al carrito</button>
           </div>
         )}
     </>
   )
 }
-// prueba
+
 
 export default Card;
