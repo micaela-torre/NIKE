@@ -9,16 +9,16 @@ div.homeContainer, div.productsContainer{
   background-position: center;
   background-size: cover;
   width: 100%;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem 0rem;
 }
 
 div.centerContainer, div.cardsContainer{
   background: rgb(255,255,255);
   width: 80%;
-  height: 95vh;
+  min-height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -126,7 +126,7 @@ div.cards{
   min-height: 80vh;
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
+  gap: 1rem;
   flex-wrap: wrap;
 }
 div.card{

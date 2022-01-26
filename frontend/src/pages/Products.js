@@ -1,13 +1,19 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import Card from '../components/Card';
 import Nav from '../components/Nav';
 
 const Products=()=>{
-    const products= [
-        {name: "Nike Air Zoom Pegasus 38", photo:"https://i.postimg.cc/R0GvXc0H/air-zoom-pegasus-38-mens-road-running-shoes-lq7-PZZ.jpg" , description:"Men's Road Running Shoes", price:120},
-        {name: "Nike Air Zoom Pegasus 38", photo:"https://i.postimg.cc/R0GvXc0H/air-zoom-pegasus-38-mens-road-running-shoes-lq7-PZZ.jpg" , description:"Men's Road Running Shoes", price:120},
-        {name: "Nike Air Zoom Pegasus 38", photo:"https://i.postimg.cc/R0GvXc0H/air-zoom-pegasus-38-mens-road-running-shoes-lq7-PZZ.jpg" , description:"Men's Road Running Shoes", price:120}
-    ]
+const[products, setProducts]= useState([])
+useEffect(async()=>{
+ try{
+    let res = await axios.get("http://localhost:4000/api/products")
+    setProducts(res.data.response)
+ }catch(err){
+     console.log(err)
+ }
+ 
+},[])
   return (
       <div className='productsContainer'>
           <div className='cardsContainer'>
